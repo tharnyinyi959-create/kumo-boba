@@ -558,3 +558,58 @@ button:focus-visible {
     background-color: var(--purple);
     transform: scale(1.08);
 }
+
+
+/* =====================================================
+   5. 3 steps
+   ===================================================== */
+
+.steps {
+    max-width: 1080px;
+    margin: 96px auto 0;
+    text-align: center;
+}
+
+.step-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.step {
+    padding: 32px 24px;
+    border-radius: 32px;
+    background-color: var(--card-bg);
+}
+
+/* Number in a circle */
+.step-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: var(--lavender);
+    font-family: var(--font-number);
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.step-num-yellow {
+    background-color: var(--yellow);
+}
+
+.step-title {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.step-desc {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--text-sub);
+}
