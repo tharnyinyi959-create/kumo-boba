@@ -699,3 +699,113 @@ button:focus-visible {
     gap: 16px;
     margin-top: 16px;
 }
+
+
+/* =====================================================
+   7. Footer
+   ===================================================== */
+
+.footer {
+    position: relative;      /* the cloud edge is placed from here */
+    margin-top: 150px;
+    padding: 0 40px;
+    background-color: var(--navy);
+    color: var(--footer-text);
+}
+
+/* Cloud-shaped top edge: rows of circles drawn with CSS */
+.footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;            /* sits right on top of the footer */
+    height: 98px;
+    background:
+        radial-gradient(circle at 50% 100%, var(--navy) 69px, transparent 70px) 0 100% / 150px 98px repeat-x,
+        radial-gradient(circle at 50% 100%, var(--navy) 50px, transparent 51px) 75px 100% / 150px 98px repeat-x;
+    pointer-events: none;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 40px 0 48px;
+}
+
+.footer-logo {
+    font-family: var(--font-number);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+    color: var(--white);
+}
+
+.footer-logo .logo-accent {
+    color: var(--lavender);
+}
+
+.footer-catch {
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+/* Three link columns */
+.footer-links {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-links > div {
+    min-width: 110px;
+}
+
+.footer-head {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.footer-links li {
+    margin-top: 8px;
+}
+
+.footer-links a,
+.sns a {
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover,
+.sns a:hover {
+    color: var(--white);
+}
+
+/* Line, then © and SNS links */
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 24px 0 32px;
+    border-top: 1px solid rgba(201, 210, 238, 0.25);
+}
+
+.copyright {
+    font-size: 12px;
+}
+
+.sns {
+    display: flex;
+    gap: 16px;
+}
+
+.sns a {
+    font-size: 12px;
+}
