@@ -613,3 +613,89 @@ button:focus-visible {
     font-size: 13px;
     color: var(--text-sub);
 }
+
+
+/* =====================================================
+   6. Home kit
+   ===================================================== */
+
+.kit {
+    position: relative;      /* pearls are placed from here */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+    max-width: 1120px;
+    margin: 76px auto 0;
+    padding: 54px 108px;
+    border-radius: 45px;
+    background-color: var(--lavender);
+}
+
+/* Pearl at the top right and bottom left */
+.kit::before,
+.kit::after {
+    content: "";
+    position: absolute;
+    background: url("../img/icons/pearl.svg") no-repeat center / contain;
+    pointer-events: none;
+}
+
+.kit::before {
+    top: -18px;
+    right: -12px;
+    width: 52px;
+    height: 52px;
+}
+
+.kit::after {
+    bottom: -20px;
+    left: -13px;
+    width: 55px;
+    height: 55px;
+}
+
+.kit-image img {
+    width: 100%;
+    max-width: 316px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.kit-title {
+    margin-top: 8px;
+    font-family: var(--font-round);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.4;
+}
+
+.kit-text .section-label {
+    color: var(--navy);
+}
+
+.kit-desc {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.kit-price {
+    margin-top: 24px;
+    font-family: var(--font-number);
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.kit-price .tax {
+    margin-left: 8px;
+    font-size: 12px;
+    color: var(--navy);
+}
+
+.kit-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+}
