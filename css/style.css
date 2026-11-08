@@ -466,7 +466,7 @@ button:focus-visible {
     position: relative;      /* badge and heart are placed from here */
 }
 
-.card-image img {
+.card-image > img {      /* only the photo, not the heart icon */
     width: 100%;
     aspect-ratio: 227 / 240;
     object-fit: cover;
